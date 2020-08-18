@@ -2,12 +2,27 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 //import { useLocation } from 'react-router-dom';
 
-const Home = ()=>{
-    //const location = useLocation();
-    //console.log(location);
+const containerVariance = {
+    hidden : {
+        y: "100vh"
+    },
+    visible: {
+        y: 0,
+        transition: { delay: 0 , ease: 'easeInOut' }
+    },
+    exit: {
+        y: '-100vh',
+        transition: { ease: 'easeInOut'}
+    }
+};
 
-    return <AnimatePresence >
-        <div
+const Home = ()=>{
+
+    return <motion.div
+        variants={ containerVariance }
+        initial="hidden"
+        animate="visible"
+        exit="exit"
         id="home-p"
         className="f-wrapper full-p">
 
@@ -30,8 +45,7 @@ const Home = ()=>{
                 <i class="fab fa-whatsapp-square"></i>
             </motion.div>
             </div>
-    </div>
-    </AnimatePresence>
+    </motion.div>
 };
 
 export default Home;

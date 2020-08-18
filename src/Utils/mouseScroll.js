@@ -1,15 +1,21 @@
-var it = 0;
+import history from './history';
 
-const handleScroll = (up, down) =>{
+const handleScroll = (up, down , pathname) =>{
     
-    const sections = ["home-p" , "skill-p" , "project-p" ];
-    var length = sections.length;
-    console.log("start : ",it);
+    const sections = ["" , "skills" , "projects" ];
+    const map = {
+        "skills" : 1,
+        "projects" : 2,
+    };
 
-    if(up == true){    
+    var length = sections.length;
+
+    var it = map[pathname.slice(1)] ? map[pathname.slice(1)] : 0 ;
+
+    if(up === true){    
         it++;
     }
-    else{
+    else if(down === true){
         it--;
     }
     
@@ -20,7 +26,7 @@ const handleScroll = (up, down) =>{
     it=0;
 
     console.log("it : ",it);
-    window.location.href = `#${sections[it]}`;
+    history.push(`/${sections[it]}`);
 };
 
 export default handleScroll;

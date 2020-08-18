@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react';
-import ScrollHor from '../Utils/ScrollHor';
 import { Carousel } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 
@@ -11,12 +10,12 @@ const ProjectCont = () =>{
         <motion.div
         initial={ { opacity: 0 , y: '3rem' }}
         animate={ { opacity: 1 , y: 0 }}
-        transition={ {ease:"easeOut" , duration: 1 , delay: 1.5 }}
+        transition={ {ease:"easeOut" , duration: 1 , delay: 1 }}
         className="car-cont">
            
         <Carousel>  
             { data.map( x => {
-                 return <Carousel.Item >  
+                 return <Carousel.Item key={x.id}>  
                  <div   
                  className="imgCont"/>  
                      <Carousel.Caption>  

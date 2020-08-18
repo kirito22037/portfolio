@@ -2,14 +2,29 @@ import React from 'react';
 import {motion , AnimatePresence } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 
-const Skills = ()=>{
-    //const location = useLocation();
-    //console.log(location);
+const containerVariance = {
+    hidden : {
+        y: "100vh"
+    },
+    visible: {
+        y: 0,
+        transition: { delay: 0 , ease: "easeInOut"}
+    },
+    exit: {
+        y: '-100vh',
+        transition: { ease: 'easeInOut'}
+    }
+};
 
-    return <AnimatePresence >
-    <div
+const Skills = ()=>{
+
+    return <motion.div
+        variants={ containerVariance }
+        initial="hidden"
+        animate="visible"
+        exit="exit"
         id="skill-p"
-            className="f-wrapper full-p">
+        className="f-wrapper full-p">
                 
                 <div className="text-center">
                 <motion.h1
@@ -22,7 +37,7 @@ const Skills = ()=>{
                 <motion.div
                 initial={ { opacity: 0 , y: '3rem' }}
                 animate={ { opacity: 1 , y: 0 }}
-                transition={ {ease:"easeOut" , duration: 1 , delay: 1.5}} 
+                transition={ {ease:"easeOut" , duration: 1 , delay: 1}} 
                 id="skill-set">
                     <div className="s-set">
                         
@@ -75,8 +90,7 @@ const Skills = ()=>{
                     </div>
                 </motion.div>
                 </div>
-        </div>
-        </AnimatePresence>;
+        </motion.div>
 };
 
 export default Skills;

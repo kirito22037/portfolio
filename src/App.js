@@ -3,14 +3,17 @@ import React from 'react';
 import NavBar from './components/NavBar';
 import Container from './components/Container';
 
-//import { BrowserRouter as Router } from 'react-router-dom';
+import { Router } from 'react-router-dom';
+import history from './Utils/history';
 
 function App() {
   return (
+    <Router history={history}>
     <div className="App">
       <NavBar/>
       <Container/>
     </div>
+    </Router>
   );
 }
 
