@@ -1,30 +1,50 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
-  font-family: sans-serif;
+  padding: 0;
+  font-family: sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+a{
+  text-decoration: none;
+  color: rgba(250, 250, 250, 1)!important;
+}
+a:hover{
+  text-decoration-line: none !important;
+  text-shadow: "0px 0px 8px rgb(255, 255, 255)" !important;
+}
 .minimal-h1
 {
   margin-top: 0;
   margin-bottom: 0.2rem;
   font-size: 5rem;
-  color: #626363;
+  font-weight: 600;
   color: rgba(250, 250, 250, 1);
 }
 .minimal-h2
 {
   margin-top: 0;
-  margin-bottom: 3rem;
   font-size: 3rem;
-  color: #626363;
+  color: rgba(250, 250, 250, 1);
+}
+.dim-white
+{
   color: rgba(250, 250, 250, 0.7);
 }
+
 .f-wrapper
 {
   display: flex;
@@ -40,18 +60,149 @@ code {
 
 #home-p
 {
-  background-color: rgba(224, 76, 52, 1);
+  background-color: rgba(255, 95, 69, 1);
   color: whitesmoke;
 }
 
 .fab
 {
-  padding: 3rem 0;
+  width: 74px;
+  height: 74px;
+  box-sizing: border-box;
+  padding: 1rem ;
   cursor: pointer;
   font-size: 3rem;
-  margin: 0 1rem;
+  transition-property: transform;
+  transition-duration: 0.6s;
+  transition-timing-function: ease;
+  overflow: hidden;
 }
 .fab:hover
 {
-  font-size: 4rem;
+  transform: scale(1.5); 
+}
+
+#nav-bar
+{
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  padding-top: 1rem;
+  padding-right: 4rem;   /*fuck not working*/
+}
+#nav-links
+{
+  list-style: none;
+}
+#nav-links li
+{
+  font-family: arial;
+  color: rgb(255, 255, 255);
+  font-size: 1.1rem;
+  font-weight: 400;
+  display: inline-block;
+  cursor: pointer;
+}
+
+
+.float-l
+{
+  float: left;
+  display: inline;
+}
+
+.float-r
+{
+  float: right;
+  display: inline;
+}
+
+
+#skill-p
+{
+  display: relative;
+  background-color: rgb(3, 182, 252);
+  background-color: rgb(0, 153, 209);
+}
+#skill-set
+{
+  width: 90vw;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+}
+.s-set
+{
+  height: 100%;
+  background-color: rgba(33, 164, 217, 1);
+  border-radius: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-list
+{
+  list-style: none;
+}
+
+.minimal-li
+{
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 3rem;
+  color: rgba(250, 250, 250, 1);
+}
+
+#project-p
+{
+  transition-timing-function: linear;
+  transition-duration: 1s;
+  background: rgb(252, 108, 124);
+}
+.rel-pos
+{
+  position: relative;
+}
+.abs-pos
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.overf-h
+{
+  overflow: hidden;
+}
+
+.imgCont
+{
+  height: 65vh;
+  width: 80vw;
+  border-radius: 1rem;
+  background-color: rgb(242, 141, 151);
+  margin: 1rem 0;
+}
+.projectDesc
+{
+  height: 10rem;
+  width: 80vw;
+  border-radius: 1rem;
+  background-color: rgb(242, 141, 151);
+  margin-bottom: 1rem;
+}
+
+.sizee{
+  width: 80vw;
+  height: 70vh;
+  border-radius: 1rem;
+}
+
+.car-cont
+{
+  width: 80vw;
+  height: 65vh;
+  border-radius: 1rem;
 }

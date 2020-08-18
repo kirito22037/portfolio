@@ -1,13 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-import Home from './pages/Home';
+import NavBar from './components/NavBar';
+import Container from './components/Container';
+
+//import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <Home/>
+      <NavBar/>
+      <Container/>
     </div>
   );
 }
