@@ -7,6 +7,7 @@ import { Router } from 'react-router-dom';
 import history from './Utils/history';
 
 function App() {
+
   return (
     <Router history={history}>
     <div className="App">

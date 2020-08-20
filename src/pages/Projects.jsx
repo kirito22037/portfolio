@@ -4,10 +4,10 @@ import ProjectCont from '../components/ProjectCont';
 
 const containerVariance = {
     hidden : {
-    y: "100vh"
+    y: "100vh" 
     },
     visible: {
-        y: 0,
+        y: 0, 
         transition: { delay: 0 , ease: "easeInOut" }
     },
     exit: {
@@ -31,7 +31,8 @@ const Projects = () => {
             initial={ { opacity: 0 , y: '3rem' }}
             animate={ { opacity: 1 , y: 0 }}
             transition={ {ease:"easeInOut" , duration: 1}}
-            className="minimal-h1">
+            className="minimal-h1 mt-5"
+            style={{ fontFamily: "Connection ii" }}>
                 Projects
             </motion.h1>
             <ProjectCont/>

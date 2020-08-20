@@ -8,6 +8,7 @@ const handleLink = ()=>{
 
 const NavBar = () => {
 
+    //return <div></div>
     return <div id="nav-bar">
         
         <ul id="nav-links"  className="float-r">

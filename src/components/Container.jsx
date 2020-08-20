@@ -47,7 +47,6 @@ const Container = () => {
 
     var location = useLocation();
     console.log(location.pathname);
-    //document.onkeydown = () => {checkKey(location.pathname)};
 
     useEffect(()=>{
         console.log("once --------------- ");
@@ -56,9 +55,10 @@ const Container = () => {
     },[location]);
 
     return <>
-                <section 
+                <div
                 //onWheel={ handleWheel }
                 className="abs-pos">
+                    
                     <AnimatePresence exitBeforeEnter>
                     <Switch location={location} key={ location.pathname }>
                         <Route exact path='/'  component={Home} />
@@ -66,7 +66,8 @@ const Container = () => {
                         <Route path='/projects'  component={Projects} />
                     </Switch>   
                     </AnimatePresence>  
-                </section>
+                    
+                </div>
     </>
 };
 

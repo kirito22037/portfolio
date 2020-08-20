@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
 }
+@font-face {
+  font-family: 'connection ii';
+  src: local('connection ii'), url(./fonts/ConnectionIi-2wj8.otf) format('otf');
+}
 html {
   scroll-behavior: smooth;
 }
@@ -11,7 +15,7 @@ body {
   font-family: sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 code {
@@ -56,7 +60,7 @@ a:hover{
 
 .full-p
 {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
 }
 
@@ -64,6 +68,32 @@ a:hover{
 {
   /*background-color: rgba(255, 95, 69, 1);*/
   color: whitesmoke;
+}
+
+#skill-p
+{
+  display: relative;
+  /*background-color: rgb(0, 153, 209);*/
+}
+
+#project-p
+{
+  /*background: rgb(252, 108, 124);*/
+}
+.rel-pos
+{
+  position: relative;
+}
+.abs-pos
+{
+  position: "absolute";
+  top: 0;
+  left: 0;
+  width: "100vw";
+  height: fit-content;
+  background-color: rgb(12, 49, 69);
+  background-color: rgb(0, 153, 209);
+  background-color: rgb(0, 0, 0);
 }
 
 .fab
@@ -90,7 +120,6 @@ a:hover{
   z-index: 1;
   width: 100vw;
   padding-top: 1rem;
-  padding-right: 4rem;   /*fuck not working*/
 }
 #nav-links
 {
@@ -119,13 +148,7 @@ a:hover{
   display: inline;
 }
 
-
-#skill-p
-{
-  display: relative;
-  /*background-color: rgb(0, 153, 209);*/
-}
-#skill-set
+.skill-set
 {
   width: 90vw;
   height: 60vh;
@@ -135,9 +158,11 @@ a:hover{
 }
 .s-set
 {
-  height: 100%;
+  /*min-width: 26rem;*/
   background-color: rgba(33, 164, 217, 1);
+  background-color: rgb(36, 35, 35);
   border-radius: 1rem;
+  padding: 0 3rem;
 
   display: flex;
   justify-content: center;
@@ -148,7 +173,10 @@ a:hover{
 {
   list-style: none;
 }
-
+.red
+{
+  color: rgb(255, 0, 0);
+}
 .minimal-li
 {
   margin-top: 0;
@@ -157,21 +185,6 @@ a:hover{
   color: rgba(250, 250, 250, 1);
 }
 
-#project-p
-{
-  /*background: rgb(252, 108, 124);*/
-}
-.rel-pos
-{
-  position: relative;
-}
-.abs-pos
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(255, 95, 69, 1);
-}
 .overf-h
 {
   overflow: hidden;
@@ -183,6 +196,9 @@ a:hover{
   width: 80vw;
   border-radius: 1rem;
   background-color: rgb(242, 141, 151);
+  background-color: rgba(3, 25, 84 , 0.6);
+  background-color:rgba(33, 164, 217, 1);
+  background-color: rgb(36, 35, 35);
   margin: 1rem 0;
 }
 .projectDesc
@@ -204,5 +220,12 @@ a:hover{
 {
   width: 80vw;
   height: 65vh;
-  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-gap: 1.5rem;
+}
+
+.transparent-black
+{
+  background-color: rgb(36, 36, 36);
 }

@@ -7,7 +7,7 @@ const containerVariance = {
         y: "100vh"
     },
     visible: {
-        y: 0,
+        y: 0, 
         transition: { delay: 0 , ease: "easeInOut"}
     },
     exit: {
@@ -26,37 +26,47 @@ const Skills = ()=>{
         id="skill-p"
         className="f-wrapper full-p">
                 
-                <div className="text-center">
+                <div className="text-center" style={ { minWidth: "100%" }}>
+                
                 <motion.h1
                 initial={ { opacity: 0 , y: '3rem' }}
                 animate={ { opacity: 1 , y: 0 }}
-                transition={ {ease:"easeOut" , duration: 1}} 
-                className="minimal-h1 mb-3">
+                transition={ {ease:"easeOut" , duration: 1 }} 
+                className="minimal-h1 mb-5 mt-3"
+                style={{ fontFamily: "Connection ii" }}>
                     SKILLs SET
                 </motion.h1>
-                <motion.div
-                initial={ { opacity: 0 , y: '3rem' }}
-                animate={ { opacity: 1 , y: 0 }}
-                transition={ {ease:"easeOut" , duration: 1 , delay: 1}} 
-                id="skill-set">
-                    <div className="s-set">
-                        
-                        <div>
+
+                <div className="d-flex justify-content-center">
+                <div 
+                className="d-flex justify-content-center flex-wrap"
+                style={ { width: "90%"}}>
+
+                    <motion.div 
+                    initial={ { opacity: 0 , y: '3rem' }}
+                    animate={ { opacity: 1 , y: 0 }}
+                    transition={ {ease:"easeOut" , duration: 1, delay: 1}}
+                    className="card align-self-stretch flex-grow-1 mx-3 mb-4 d-flex align-items-center justify-content-center"
+                    style={ { backgroundColor : "rgb(36, 35, 35)" , width : "16rem" , }}>
+                        <div className="">
                             <ul className="skill-list">
-                                <li className="minimal-li"> C++ </li>
-                                <li className="minimal-li"> C </li>
-                                <li className="minimal-li"> JS </li>
+                                <li className="minimal-li "> C++ </li>
+                                <li className="minimal-li "> C </li>
+                                <li className="minimal-li "> JS </li>
                             </ul>
                             <div>
-                                <i class="fab fa-cuttlefish"></i>
-                                <i class="fab fa-js"></i>
+                                <i class="fab fa-cuttlefish red"></i>
+                                <i class="fab fa-js red"></i>
                             </div>
                         </div>
+                    </motion.div>
 
-                    </div>
-
-                    <div className="s-set">
-
+                    <motion.div 
+                    initial={ { opacity: 0 , y: '3rem' }}
+                    animate={ { opacity: 1 , y: 0 }}
+                    transition={ {ease:"easeOut" , duration: 1, delay: 1+0.2}}
+                    className="card align-self-stretch flex-grow-1 mx-2 mb-4 d-flex align-items-center justify-content-center"
+                    style={ { backgroundColor : "rgb(36, 35, 35)" , width : "16rem", }}>
                         <div>
                             <ul className="skill-list">
                                 <li className="minimal-li"> React JS </li>
@@ -64,14 +74,18 @@ const Skills = ()=>{
                                 <li className="minimal-li"> Express JS </li>
                             </ul>
                             <div>
-                                <i class="fab fa-react"></i>
-                                <i class="fab fa-node"></i>
+                                <i class="fab red fa-react"></i>
+                                <i class="fab red fa-node"></i>
                             </div>
                         </div>
+                    </motion.div>
 
-                    </div>
-
-                    <div className="s-set">
+                    <motion.div 
+                    initial={ { opacity: 0 , y: '3rem' }}
+                    animate={ { opacity: 1 , y: 0 }}
+                    transition={ {ease:"easeOut" , duration: 1, delay: 1+0.4}}
+                    className="card align-self-stretch flex-grow-1 mx-2 mb-4 d-flex align-items-center justify-content-center"
+                    style={ { backgroundColor : "rgb(36, 35, 35)" , width : "16rem" , }}>
 
                         <div>
                         <ul className="skill-list">
@@ -81,14 +95,15 @@ const Skills = ()=>{
                             <li className="minimal-li"> GIT </li>
                         </ul>
                         <div>
-                            <i class="fab fa-git-alt"></i>
-                            <i class="fab fa-github"></i>
-                            <i class="fab fas fa-database"></i>
+                            <i class="fab red fa-git-alt"></i>
+                            <i class="fab red fa-github"></i>
+                            <i class="fab red fas fa-database"></i>
                         </div>
                         </div>
 
-                    </div>
-                </motion.div>
+                    </motion.div>
+                </div>
+                </div>
                 </div>
         </motion.div>
 };
